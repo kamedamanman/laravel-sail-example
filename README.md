@@ -33,8 +33,9 @@ alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 # Elastic Beanstalkへデプロイ
 
 1. Elastic Beanstalkのコンソールで空のアプリケーションと環境を作成
-2. 表示確認 403でOK
+2. 初期ページが表示される
 3. Elastic BeanstalkのコンソールでRDSを作成(ユーザとパスワードは.envから確認)
+4. 設定から「ソフトウェア」から「ドキュメントルート」を `/public` に変更
 
 ## .env.prod を編集
 
