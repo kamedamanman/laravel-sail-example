@@ -3,8 +3,8 @@
 Laravel開発環境構築
 
 ```bash
-PHP 8.1.11
-Composer version 2.4.3
+PHP 8.2
+Composer version 2.6.5
 ```
 
 ## 新規プロジェクト作成
