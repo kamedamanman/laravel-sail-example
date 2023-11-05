@@ -24,13 +24,13 @@ class FileUploadController extends Controller
         // アップロードするファイルの名前
         $fileName = $request->input('file_name');
 
-        // 事前署名付きURLの有効期間（例: 60秒）
+        // 事前署名付きURLの有効期間
         $expiry = '+30 minutes';
 
         // 事前署名付きURLを生成
         $cmd = $s3->getCommand('PutObject', [
             'Bucket' => $disks['bucket'],
-            'Key'    => $fileName,
+            'Key'    => "images/" . $fileName,
         ]);
 
         $presignedUrl = (string)$s3->createPresignedRequest($cmd, $expiry)->getUri();
